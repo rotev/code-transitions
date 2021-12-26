@@ -1,9 +1,6 @@
 import "./styles.css";
-import { doStuff } from './blah'
-import { doThings } from './code-transition/git-diff'
+import { doBetter } from './code-transition/reveal'
 
 document.getElementById("display").innerHTML = "bye";
 
-//doStuff();
-doThings();
-
+doBetter();
