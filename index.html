@@ -3,60 +3,12 @@
   <head>
     <title>Parcel Sandbox</title>
     <meta charset="UTF-8" />
-
-    <link rel="stylesheet" href="/node_modules/reveal.js/dist/reveal.css">
-    <link rel="stylesheet" href="/node_modules/reveal.js/dist/theme/black.css">
   </head>
 
   <body>
 
-    <div class="reveal">
-      <div class="slides">
-				<section data-auto-animate>
-					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
-            describe('ItemPaneSidebarActions', () => {
-              test('Convert to issue', async () => {
-                const {wrapper, itemStore, statsClient} = setupEnvironment()
-                const item = getDraftIssueModel(itemStore)
-                jest.spyOn(statsClient, 'postStats')
-            
-                expect(item.contentType).toEqual('Issue')
-                expect(statsClient.postStats).toHaveBeenCalledWith({
-                  payload: {
-                    memexProjectItemId: item.id,
-                    name: 'draft_convert',
-                    ui: 'item-pane'
-                  }
-                })
-              })      
-					</code></pre>
-				</section>
-
-				<section data-auto-animate>
-					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="3-10"><script type="text/template">
-            describe('ItemPaneSidebarActions', () => {
-              test('Convert to issue', async () => {            
-                expect(item.contentType).toEqual('DraftIssue')
-            
-                render(<ItemPaneSidebarActions item={item} />, {wrapper})
-                clickConvertToIssueButton()
-                await selectRepo('memex')
-            
-                expect(item.contentType).toEqual('Issue')
-              })            
-					</script></code></pre>
-				</section>
-      </div>
-    </div>
-
     <div id="app"></div>
 
-    <pre id="display"></pre>
-
-    <pre class="language-diff-tsx"><code id="code3" class="language-diff-tsx diff-highlight"></code></pre>
-    <pre><code id="code1"></code></pre>
-    <pre><code id="code2"></code></pre>
-
-    <script src="src/index.ts" type="module"></script>
+    <script src="src/index.js" type="module"></script>
   </body>
 </html>
