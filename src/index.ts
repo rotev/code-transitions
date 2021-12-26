@@ -1,1 +1,3 @@
-document.getElementById("display").innerHTML = "hello";
+import "./styles.css";
+
+document.getElementById("display").innerHTML = "bye";
