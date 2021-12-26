@@ -67,6 +67,6 @@ export function doStuff() {
 
   display.appendChild(fragment);
 
-  code3.innerHTML = hljs.highlight(fullCode, { language: "typescript" }).value;
+  code3.innerHTML = Prism.highlight(fullCode, Prism.languages.tsx, 'tsx');
 }
 
