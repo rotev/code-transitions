@@ -3,3 +3,9 @@ body {
   background: black;
   color: white;
 }
+
+
+/* Prism overrides */
+.token.inserted {
+  display: none;
+}
